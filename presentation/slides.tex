@@ -1,0 +1,458 @@
+
+\documentclass{beamer}
+\usepackage{beamerthemeshadow}
+\usepackage[english]{babel}
+
+\begin{document}
+\title{Riemann Zeta Function and Hypothesis}  
+\author{R. Galvin, S. Halloran, E. Jang, J. Wong}
+\date{\today} 
+
+\frame{\titlepage} 
+
+\frame{\frametitle{Outline}\tableofcontents} 
+
+\section{Introduction} {
+\subsection{Introduction to Building Blocks}{
+	\frame{\frametitle{A Simple Analogy} 
+	What should the question mark be?
+	\begin{figure}
+	\centering
+	\end{figure}
+}
+
+\frame{\frametitle{A Simple Analogy} 
+What should the question mark be?
+\begin{figure}
+\centering
+
+\end{figure}
+}
+
+\frame{\frametitle{Another Analogy} 
+What should the question mark be?
+\begin{figure}
+\centering
+\end{figure}}
+
+\frame{\frametitle{Another Analogy} 
+What should the question mark be?
+\begin{figure}
+\centering
+
+\end{figure}}
+
+\frame{\frametitle{Prime Numbers as the Building Blocks}
+\begin{itemize}
+\pause
+\item Chemist define their building blocks in terms of atoms. Molecular structures are comprised of smaller well defined building blocks called atoms. 
+\pause
+\item Mathematicians, however, define their building blocks in terms of primes. As proved before, any number can be decomposed into a set of primes that constructed it.
+\end{itemize}
+}
+
+
+\subsection{Applications of Primes}{
+\frame{\frametitle{Applications of Primes}
+\pause
+Some interesting applications of primes include: 
+\pause
+\begin{itemize}
+\item RSA Algorthm for cryptography (determining primes, hard to factor)
+\pause
+\item Cicada 13/17 year hibernation (evolution process)
+\pause
+\item And more...
+\end{itemize}
+
+}
+\frame{\frametitle{Furthermore}
+\begin{itemize}
+\pause
+\item ``How many primes ARE there?''
+\pause
+\item A ``Periodic Table'' for primes?
+\pause
+\item It has been previously proven that there are infinitely many primes. 
+\pause
+\item The new questions is thus, ``what is the distribution of primes?''
+\end{itemize}
+}
+}
+
+}
+
+\subsection{Distribution of Primes}{
+
+\frame{\frametitle{Distribution of Primes}
+\pause
+\begin{figure}
+\centering
+
+\end{figure}
+
+\begin{itemize}
+\pause
+\item At 15 years old, Guass estimated that $\pi \approx  \frac{n}{ln(n)}$. 
+\pause
+\item He later estimated that $\pi(x) \approx  \frac{n}{ln (n)+B}$
+\pause
+\item Eventually, he estimated that $\pi(x) \approx  Li(x)$ where $Li(x)$ is the logarithmic integral defined as
+\begin{equation}
+Li(x)=\int_2^n \frac{dx}{ln(x)}
+\end{equation}
+\end{itemize}
+}
+
+\frame{\frametitle{Distribution of Primes} 
+\begin{figure}
+\centering
+
+\end{figure}
+
+
+}
+}
+
+\subsection{A Brief Biography on Bernhard Riemann}{
+\frame{\frametitle{Bernhard Riemann}
+\begin{figure}
+
+\end{figure}
+}
+\frame{\frametitle{Bernhard Riemann}
+Bernhard Riemann(September 17, 1826 – July 20, 1866), an influential German mathematician, made a lasting contributions to: 
+\begin{itemize}
+\pause
+\item Analysis
+\pause
+\item Number theory
+\pause
+\item Differential geometry (enabling the later development of general relativity)
+\end{itemize}
+}
+
+\frame{\frametitle{Bernhard Riemann}
+Riemann had an enormous impact on the mathematic community; some things he introduced was: 
+\pause
+\begin{itemize}
+\item Riemann Integral 
+\pause
+\item Riemann Sums
+\pause
+\item Riemann Zeta function
+\pause
+\item Riemann hypothesis
+\end{itemize}
+}
+
+
+\frame{\frametitle{Bernhard Riemann}
+\begin{itemize}
+\item In 1846, his father, after gathering enough money, sent Riemann to the renowned University of Gottingen (Theology) 
+\pause
+\item However, he began studying mathematics under Carl Friedrich Gauss. 
+\pause
+\item Gauss recommended that Riemann give up his theological work and enter the mathematical field.
+\pause
+\item After getting his parents' approval, Riemann transferred to the University of Berlin in 1847.
+\pause
+\item During his time of study, Jacobi, Lejeune Dirichlet, Steiner, and Eisenstein were teaching. 
+\end{itemize}
+}
+
+}
+
+
+
+}
+
+
+\section{Riemann Zeta Function} {
+\subsection{Introduction} {
+\frame{\frametitle{Introduction} 
+\begin{itemize}
+\item When considering prime numbers, one of the most common things mathematicians ask is, “how many prime numbers are there in a specific set?” 
+\pause
+\item That is, if we look at the integers $\left\{ {1,2, 3, . . . , n}\right\} $, is there a way to know how many prime numbers are in this set for all $n$? 
+\pause
+\item Indeed, this question has long been pondered, but has not yet met with a concrete answer.
+\end{itemize} 
+}
+
+\frame{\frametitle{Introduction}
+In the 19th century, a brilliant mathematician by the name of Bernhard Riemann introduced a function known as the Riemann zeta function, $\zeta(s)$, defined as
+\pause
+\begin{equation}
+\zeta(s) = \sum\limits_{n=1}^\infty {1 \over n^s}.
+\end{equation}
+\pause
+which turns out to have an intricate connection to the prime numbers, and also $\pi(x)$, the counting function. Mathematicians have long since studied the Riemann zeta function in attempts to unlock the secrets of the prime numbers.
+
+}
+}
+
+\subsection{Proof of Convergence}{
+\frame{\frametitle{Proof of Convergence} 
+We can prove convergence of the Riemann Zeta function for $\Re(s)>1$ by applying the following:\\
+\begin{itemize}
+\item Triangle Inequality Theorem 
+\item Cauchy-Integral Theorem 
+\end{itemize}
+}
+
+\frame{\frametitle{Continued}
+\begin{equation}
+\zeta(s) = \sum\limits_{n=1}^\infty \frac{1}{n^s}
+\end{equation}
+
+\pause
+We then take the absolute value of the  entire function and using the triangle inequality theorem we are left with the following:
+
+\begin{equation}\mid \zeta(s) \mid =\mid  \sum\limits_{n=1}^\infty \frac{1}{n^s} \mid \le \sum\limits_{n=1}^\infty \mid \frac{1}{n^s} \mid = \sum\limits_{n=1}^\infty \frac{1}{\mid n^s \mid}	\end{equation}
+
+\pause
+We then can express the complex number $s$ as $x+iy$ and we acquire the next inequality:
+
+\begin{equation}
+\mid \zeta(s) \mid \le \sum\limits_{n=1}^\infty \frac{1}{\mid n^s \mid} =\sum\limits_{n=1}^\infty \frac{1}{\mid n^{x+iy} \mid} = \sum\limits_{n=1}^\infty \frac{1}{\mid n^x \mid \mid n^{iy}\mid}
+\end{equation}
+
+}
+
+\frame{\frametitle{Continued}
+We then proceed by manipulating the exponential of $n^{iy}$ to get $e^{iy\log(n)}$ .We can acquire to this by first taking the logarithm of $n^{iy}$ and then taking the exponential of that logarithm.  Then when we take the absolute value of $e^{iy\log(n)}$ we get one because this exponential lies on the unit circle and the absolute value of the unit circle is $1$.  Thus , we get the following:
+\pause
+\begin{equation}\mid \zeta(s) \mid \le \sum\limits_{n=1}^\infty \frac{1}{\mid n^x \mid \mid n^{iy}\mid} = \sum\limits_{n=1}^\infty \frac{1}{ n^x  \mid e^{iy\log(n)}\mid} =\sum\limits_{n=1}^\infty \frac{1}{ n^x }\end{equation}
+}
+
+\frame{\frametitle{Continued}
+\begin{equation}\mid \zeta(s) \mid \le \sum\limits_{n=1}^\infty \frac{1}{ n^x }\end{equation}
+
+Using the right side of the inequality above, we apply the Cauchy-Integral Theorem which tells us that the sum is converging/diverging, if the corresponding Integral is converging/diverging. We then are left with:
+\pause
+\begin{equation}\sum\limits_{n=1}^\infty \frac{1}{ n^x }  \longleftrightarrow   \int_1^\infty   \frac{1}{t^x}dt = \frac{1}{1-x}t^{1-x} \arrowvert_1^\infty\end{equation}
+}
+
+}
+
+\frame{\frametitle{Conclusion of Convergence Proof}
+When we solve the integral, we must then look at what occurs when we plug in $1$ and $\infty$.  When we plug in one, the equation fails since the denominator becomes zero and this tells us that the equation is divergent at one.  When we plug in $\infty$, we must examine what occurs at $t^{1-x}$.  If $t$ was to the power $+\infty$, then we would get divergence, but we get $t^{-\infty}$, so we get a convergence.  Therefore, we can finally conclude that we get convergence when $x=\Re(s)>1$.  
+
+}
+\subsection{Euler Product}{
+\frame{\frametitle{Euler Product} 
+Euler was the first to show the relationship between primes and the Riemann zeta function. He proposed an equality that is now formally known as the Euler product formula. The formula is defined as:
+\pause
+\begin{equation}
+\sum\limits_ {s=1}^{\infty} \frac{1}{n^s}= \prod\limits_{p-prime} \frac{1}{1-p^{-s}}
+\end{equation}
+\pause
+To prove the Euler product formula, only the formula for a geometric series and the fundamental theorem of arithmetic are needed.
+}
+
+\frame{\frametitle{Euler Product}
+A more understandable proof that is easy to follow was actually discovered by Euler himself and applies the method which Erostophanese used to sieve out prime numbers. First we must assume that $\Re(s)>1$.
+\pause
+\begin{equation}
+\zeta(s)=1+\frac{1}{2^s}+\frac{1}{3^s}+\frac{1}{4^s}+...
+\end{equation}
+\pause
+\begin{equation}
+\frac{1}{2^s}\zeta(s)=\frac{1}{2^s}+\frac{1}{4^s}+\frac{1}{6^s}+\frac{1}{8^s}+...
+\end{equation}
+\pause
+Subtract the second term from the first and we remove all factors of 2.
+\begin{equation}
+(1-\frac{1}{2^s})\zeta(s)=1+\frac{1}{3^s}+\frac{1}{5^s}+\frac{1}{7^s}+\frac{1}{9^s}+...
+\end{equation}
+}
+
+\frame{\frametitle{Euler Product}
+Repeating for the next term:
+\pause
+\begin{equation}
+\frac{1}{3^s}(1-\frac{1}{2^s})\zeta(s)=\frac{1}{3^s}+\frac{1}{9^s}+\frac{1}{15^s}+\frac{1}{21^s}+\frac{1}{27^s}+...
+\end{equation}
+\pause
+By doing a similar subtraction as before we get:\pause
+\begin{equation}
+(1-\frac{1}{3^s})(1-\frac{1}{2^s})\zeta(s)=1+\frac{1}{5^s}+\frac{1}{7^s}+\frac{1}{11^s}+\frac{1}{13^s}...
+\end{equation}
+where all elements having a factor of 3 or 2 (or both) are removed.
+}
+
+
+\frame{\frametitle{Euler Product}
+Repeating this process infinitely for all prime numbers we see that:
+\pause
+\begin{equation}
+...(1-\frac{1}{11^s})(1-\frac{1}{7^s})(1-\frac{1}{5^s})(1-\frac{1}{3^s})(1-\frac{1}{2^s})\zeta(s)=1
+\end{equation}
+\pause
+Then we divide both sides by everything and we obtain:
+\pause
+\begin{equation}
+\zeta(s)=\frac{1}{(1-\frac{1}{2^s})(1-\frac{1}{3^s})(1-\frac{1}{5^s})(1-\frac{1}{7^s})(1-\frac{1}{11^s})...}
+\end{equation}
+\pause
+This equality can then be written as an infinite product over all primes $p$:
+\pause
+\begin{equation}
+\zeta(s)=\prod\limits_{p=prime}\frac{1}{1-p^{-s}}
+\end{equation}
+}
+}
+
+\subsection{Analytic Continuation}{
+\frame{\frametitle{Analytic Continuation}
+\pause
+The Riemann zeta function is defined as the analytic continuation of the function defined for $\sigma>1$ by the sum of the preceding series. In short, analytic continuation is a technique used to extend the domain of a given analytic function, which is a function that is locally given by a convergent power series. Another way to define analyticity is that a function is infinitely differentiable. Riemann showed that the function defined by the series on the half-plane of convergence can be continued analytically to all complex values $s \neq 1$. For $s=1$, the series is the harmonic series which diverges to $+\infty$, and
+\pause
+\begin{equation}
+\lim \limits_{s \to 1} (s-1)\zeta(s)=1.
+\end{equation}
+}
+}
+}
+\section{Riemann Hypothesis} {
+\subsection{Introduction}{
+\frame{\frametitle{Introduction} 
+\begin{figure}
+
+\end{figure}
+The Riemann hypothesis is the conjecture that states the nontrivial zeros of the Riemann zeta function all have real part $1/2$. 
+}
+
+\frame{\frametitle{Continued}
+\begin{itemize}
+\item The function itself has zeros at the negative even integers. In other words, $\zeta(s)=0$ when $s$ is $-2$, $-4$, -$6$, $-8$, ... (trivial zeros) 
+\pause
+\item The conjecture states that the real part of every nontrivial zero (those that do not exist at the negative even integers) of the Riemann zeta function all have real part $1/2$. 
+\pause
+\item In other words, we say that all nontrivial zeros must exist on the line $1/2+it$ where $t$ is a real number and $i$ denotes the imaginary part of the critical line.
+\end{itemize}
+}
+\frame{\frametitle{Continued}
+According to the Clay Mathematics Institute, the assertion that the Riemann hypothesis assumes that the ``interesting [nontrivial] solutions to the equation $\zeta(s)=0$ [lies] on a certain vertical straight line. This has been checked for the first 1,500,000,000 solutions. A proof that it is true for every interesting solution would shed light on many of the mysteries surrounding the distribution of prime numbers." 
+}
+
+}
+
+\subsection{The Zeros of the Riemann Zeta Function}{
+\frame{\frametitle{The Zeros of the Riemann Zeta Function}
+\pause
+One can show using numerical calculations that a number of zeros exist on the critical strip by comparing to the function
+\begin{equation}
+\pi^{-s/2}\Gamma(\frac{s}{2})\zeta(s)
+\end{equation}
+\begin{itemize}
+\pause
+\item The function has the same zeros as the Riemann zeta function.
+\pause
+\item One can show the existence of the zeros by extracting two points on the curve and numerically demonstrating that the function changes signs. 
+\pause
+\item By doing so, one can conclude that there exists atleast a single simple root in this interval that is defined by the two points. 
+\end{itemize}
+}
+
+\frame{\frametitle{Continued}
+By 2004, mathematicians Gourdon and Demichel had found $10,000,000,000,000$ zeros and a few of large (up to $~10^{24}$) heights by using the a process called the Odlyzko-Schonhage algorithm (we will not go talk about this algorithm); they later showed another two billion zeros around heights of $10^{13}$, $10^{14}$, ..., $10^{24}$. 
+}
+
+}
+
+\subsection{A Consequence of the RH: Riemann's explicit formula}
+\frame{\frametitle{Riemann's explicit formula}
+\pause
+Riemann introduced an explicit formula for the number of primes, denoted as $\pi(x)$, less than a specific number $x$. Riemann's formula involves summing over the non-trivial zeros of the Riemann zeta function, denoted as $p$. 
+\pause
+\begin{equation}
+\Pi_0(x)=Li(x)-\sum_pLi(x^p)-log(2)+\int_x^\infty \frac{dt}{t(t^2-1)log(t)}
+\end{equation}
+where the function $Li(x)$ refers to the logarithmic integral function 
+\begin{equation}
+\pause
+Li(x)=\int_0^x \frac{dt}{log(t)}
+\end{equation}
+\pause
+The formula shows that the zeros of the Riemann zeta function controls the oscillations of the primes about their expected positions.
+}
+
+\subsection{A Consequence of the RH: Littlewood's Theorem}{
+\frame{\frametitle{Littlewood's Theorem}
+Recall that from Riemann's explicit function, 
+\begin{equation}
+\pi(x)=Li(x)-\sum_pLi(x^p)-log(2)+\int_x^\infty \frac{dt}{t(t^2-1)log(t)}
+\end{equation}
+\pause
+In 1914, a mathematician named John Edensor Littlewood showed that
+\begin{equation}
+\pi(x) > Li(x)+\frac{\sqrt{x}}{3log (x)}log log log (x)
+\end{equation}
+\pause
+where $Li(x)$ is the logarithmic integral defined to be \begin{equation}
+Li(x) = \int_0^x \frac{1}{log(t)}\,dt
+\end{equation}
+\pause
+and the error term is defined to be \begin{equation}
+\frac{\sqrt{x}}{3log (x)}log log log (x)
+\end{equation}
+}
+
+\frame{\frametitle{Continued}
+Littlewood showed that 
+\begin{equation}
+\pi(x) > Li(x)+\frac{\sqrt{x}}{3log (x)}log log log (x)
+\end{equation}
+held true for arbitrarily large values of $x$. However,
+\pause
+\begin{equation}
+\pi(x) < Li(x)-\frac{\sqrt{x}}{3log (x)}log log log (x)
+\end{equation}
+also holds true for other arbitrarily large values of $x$. 
+\pause
+}
+\frame{\frametitle{Littlewood Continued and Skewe's number}
+\begin{itemize}
+\item Therefore, Littlewood showed that, under the assumption of the Riemann hypothesis, in a proof of about $12$ pages, the difference $\pi(x) - Li(x)$ changes signs infinitely as $x$ becomes arbitrarily large; the estimation defined as \emph{Skewes' number} approximates the value of $x$ corresponding to occurrence of first sign change. 
+\pause
+\item The most recent estimation of \emph{Skewe's number} is below  $e^{727.951346801}$; by assuming the Riemann hypothesis the exponent could be reduced to $727.951338611$.
+\end{itemize}
+}
+}
+\section{Conclusion}{
+\frame{\frametitle{Conclusion}
+\pause
+The Riemann zeta function and Riemann's hypothesis have helped mathematicians around the world get closer and closer to fully understanding the prime numbers. For much of the history of mathematics, we have thought the distribution of prime numbers is seemingly random; given an integer $x$, there is no real way to know how many primes will be in $\left\{ {1,2, 3, . . . , x}\right\} $. However, if the Riemann hypothesis is true, then it suggests that the distribution of primes is not so random after all. In fact, should Riemann's hypothesis hold true, we will be much closer to understanding just how regular the distribution of the primes is.
+
+
+
+}
+}
+\section{References}{
+\frame{\frametitle{References}
+\begin{itemize}
+\item Riemann, Bernhard (1859), "Ueber die Anzahl der Primzahlen unter einer gegebenen Grösse", Monatsberichte der Berliner Akademie. In Gesammelte Werke, Teubner, Leipzig (1892), Reprinted by Dover, New York (1953). Original manuscript (with English translation). Reprinted in (Borwein et al. 2008) and (Edwards 1874).
+\item Hardy, G. H. \& Littlewood, J. E. (1916). ``Contributions to the Theory of the Riemann Zeta-Function and the Theory of the Distribution of Primes''. Acta Mathematica 41: 119–196.
+\item Hardy, G. H.; Littlewood, J. E. (1921), ``The zeros of Riemann's zeta-function on the critical line", Math. Z. 10 (3–4): 283–317.
+\end {itemize}
+}
+\frame{\frametitle{References}
+\begin{itemize}
+\item Clay Mathematics Institute. Riemann Hypothesis. Millenium Problem. $<$http://www.claymath.org/millennium/Riemann\_Hypothesis$>$.
+\item Ivić, Aleksandar (2013). The theory of Hardy's Z-function. Cambridge Tracts in Mathematics 196. Cambridge: Cambridge University Press. ISBN 978-1-107-02883-8. 
+\item Gourdon, Xavier (2004), The $10^{13}$ first zeros of the Riemann Zeta function, and zeros computation at very large height.
+\end {itemize}
+}
+\frame{\frametitle{References}
+\begin{itemize}
+\item Askey, R. A.; Roy, R. (2010), ``Gamma function", in Olver, Frank W. J.; Lozier, Daniel M.; Boisvert, Ronald F.; Clark, Charles W., NIST Handbook of Mathematical Functions, Cambridge University Press, ISBN 978-0521192255, MR2723248.
+\item Milton Abramowitz and Irene A. Stegun, Handbook of Mathematical Functions, (1964) Dover Publications, New York. ISBN 978-0-486-61272-0 .
+\end {itemize}
+
+}
+}
+
+\end{document}
+
