@@ -1,3 +1,5 @@
+tic;
+
 vid = VideoReader('./data/cookie.avi');
 for i = 1:vid.NumberOfFrames
 	img = read(vid,i);
@@ -7,5 +9,8 @@ for i = 1:vid.NumberOfFrames
 	%requires a square matrix
 %	imagesc(CompressLowPass(img(:,linspace(101,700,600),:),1/16));
 	%requires dimensions to be divisible by last param, which must be power of 2
-	imagesc(CompressAverage(img(1:592,:,:),1/16,16));
+	imagesc(CompressAverage(img(1:592,:,:),1/4,16));
 end
+
+totalTime = toc;
+disp(['CPU time: ', num2str(totalTime)]);
