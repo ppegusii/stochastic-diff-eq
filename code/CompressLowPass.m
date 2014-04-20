@@ -4,6 +4,9 @@
 %		f = compression factor 0<=f<=1
 %	outputs:
 %		i = compressed image with compression factor at most f
+%	notes:
+%		the smaller f is (higher compression ratio) the greater the time
+%			complexity because the two inner for loops have more iterations
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 function i = CompressLowPass(i,f)
 	sizeI = size(i);
