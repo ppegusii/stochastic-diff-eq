@@ -41,25 +41,35 @@
 	}
 }
 
-\section{Image Compression}{
-\subsection{Euler-Marauyama Method} {
-		\frame{\frametitle{Euler-Marauyama Method} {
-			We approximate the solution by assigning y-values $w_0 < w_1 < w_2 < \cdots < w_n$ at discretized $t$, given the SDE IVP
-			\begin{equation}
-				dy(t) = f(y,t)dt+g(t,y)dB_t
-			\end{equation}
-			\begin{equation}
-				y(a) = y_a
-			\end{equation}
+\section{Image Compression} {
+	\frame{\frametitle{Image Compression} {
+		\begin{figure}[H]
+		\centering
+		\includegraphics[scale=.40]{Images/throughput.png}
+		\end{figure}
+		Stochastic differential equations are often used to model the nondeterministic behavior of network channels in computer science.
+		}
+	}
+	\subsection{Compression Using Low Pass} {
+		\frame{\frametitle{Compression Using Low Pass} {
+			A \textbf{Channel} is the medium through which a message propagates from sender to receiver.
 			\begin{figure}[H]
 			\centering
-			\includegraphics[scale=.3]{Images/euler.png}
+			\includegraphics[scale=.20]{Images/network_components.png}
 			\end{figure}
 			}
 		}
 	}
-
-
+	\subsection{Compression Using Average} {
+		\frame{\frametitle{Compression Using Average} {
+			A \textbf{Channel} is the medium through which a message propagates from sender to receiver.
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.20]{Images/network_components.png}
+			\end{figure}
+			}
+		}
+	}
 }
 
 \section{Implementation}{
