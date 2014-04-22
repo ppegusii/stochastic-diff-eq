@@ -29,17 +29,22 @@ function [r,q] = Experiment(r0,k,kw,s,sw,a,v,c)
 	t = linspace(0,frames/fps+1,frames+1);
 	%starting at 2 because the video is not playing at t_0
 	for i = 2:frames+1
-		plot(t(1:i),r(1:i),t(1:i),f(1:i));
+		%plot(t(1:i),r(1:i),t(1:i),f(1:i));
 		legend('channel rate','compression factor');
-		pause(.5);
+		%pause(.5);
 		img = read(vid,i-1);
 		%make img dimensions divisible by chunk
 		imgDim = size(img);
+        fprintf('size of image: %s\n', mat2str(imgDim));
 		h = floor(imgDim(1)/chunk)*chunk;
 		w = floor(imgDim(2)/chunk)*chunk;
 %		imagesc(c(img(1:h,1:w,:),1/8,chunk));
-		imagesc(c(img(1:h,1:w,:),f(i),chunk));
-		pause(.5);
+        ii = c(img(1:h,1:w,:),f(i),chunk);
+		%imagesc(ii);
+		%pause(.5);
+        display_image (ii, img, r(1:i), f(1:i), t(1:i));
+        
+        %pause(.5);
 	end
 	q = f;
 end
