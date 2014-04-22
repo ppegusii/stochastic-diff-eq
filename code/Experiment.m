@@ -44,7 +44,7 @@ function [r,q] = Experiment(r0,k,kw,s,sw,a,v,c)
 		%pause(.5);
         display_image (ii, img, r(1:i), f(1:i), t(1:i));
         
-        %pause(.5);
+        pause(.5);
 	end
 	q = f;
 end
