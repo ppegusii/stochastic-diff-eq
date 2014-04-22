@@ -1,11 +1,10 @@
-
 \documentclass{beamer}
 \usepackage{beamerthemeshadow}
 \usepackage[english]{babel}
 
 \begin{document}
 \title{Modeling Variable Throughput Channels with Stochastic ODEs}  
-\author{D. Masi, P. Pegus II , J. Wong}
+\author{D. Masi, P. Pegus II , J. M. Wong}
 \date{\today} 
 
 \frame{\titlepage} 
@@ -40,6 +39,43 @@
 			}
 		}
 	}
+}
+
+\section{Image Compression} {
+	\frame{\frametitle{Image Compression} {
+		}
+	}
+	\subsection{Compression Using Low Pass} {
+		\frame{\frametitle{Compression Using Low Pass} {
+			}
+		}
+	}
+	\subsection{Compression Using Average} {
+		\frame{\frametitle{Compression Using Average} {
+			}
+		}
+	}
+}
+
+\section{Implementation}{
+\subsection{Euler-Marauyama Method} {
+		\frame{\frametitle{Euler-Marauyama Method} {
+			We approximate the solution by assigning y-values $w_0 < w_1 < w_2 < \cdots < w_n$ at discretized $t$, given the SDE IVP
+			\begin{equation}
+				dy(t) = f(y,t)dt+g(t,y)dB_t
+			\end{equation}
+			\begin{equation}
+				y(a) = y_a
+			\end{equation}
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.3]{Images/euler.png}
+			\end{figure}
+			}
+		}
+	}
+
+
 }
 \section{Demonstration}{
 	\frame{\frametitle{Demonstration} {
