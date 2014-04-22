@@ -1,4 +1,3 @@
-
 \documentclass{beamer}
 \usepackage{beamerthemeshadow}
 \usepackage[english]{babel}
@@ -40,6 +39,27 @@
 			}
 		}
 	}
+}
+
+\section{Image Compression}{
+\subsection{Euler-Marauyama Method} {
+		\frame{\frametitle{Euler-Marauyama Method} {
+			We approximate the solution by assigning y-values $w_0 < w_1 < w_2 < \cdots < w_n$ at discretized $t$, given the SDE IVP
+			\begin{equation}
+				dy(t) = f(y,t)dt+g(t,y)dB_t
+			\end{equation}
+			\begin{equation}
+				y(a) = y_a
+			\end{equation}
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=.3]{Images/euler.png}
+			\end{figure}
+			}
+		}
+	}
+
+
 }
 
 \section{Implementation}{
