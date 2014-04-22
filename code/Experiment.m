@@ -7,10 +7,10 @@
 %		sw = weight of stochastic rate of change
 %		a = adaptive streaming algorithm
 %		v = AVI video file path
+%		c = video compression algorithm
 %	outputs:
 %		r = discrete realized channel rate, each r_i is the proportion of a frame the channel can support
 %		q = an array containing the quality of the frame at each time step 1=original quality,...,0=frame did not arrive on time
-%		c = video compression algorithm
 %	constraints:
 %		k and w will have to be the same size and at least as big as the size of i (right?)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

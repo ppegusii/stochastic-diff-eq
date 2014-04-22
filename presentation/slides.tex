@@ -39,6 +39,50 @@
 			}
 		}
 	}
+	\subsection{Throughput} {
+		\frame{\frametitle{Throughput} {
+			We model the variations in throughput with a simple algorithm that combines deterministic and probabilistic influences.
+			\begin{description}
+				\item[Deterministic] \hfill \\
+					- \textbf{Constant}: The obvious case of constant throughput. \\
+					- \textbf{Periodic}: The throughput a wireless device achieves can vary periodically as it changes location. \\
+					- \textbf{Burst}: Internet Service Providers may give high initial throughput rates. \\
+				\item[Probabilistic] \hfill \\
+					- \textbf{Periodic}: Can model the chance of loss. \\
+					- \textbf{Approaching zero}: When communication within a channel begins, there may be greater risk of message collisions. \\
+			\end{description}
+			}
+		}
+	}
+	\subsection{Application} {
+		\frame{\frametitle{Application} {
+			Modeling a variable throughput channel is good, but we'd really like to test an application using it as a communication medium. So we simulate
+			an adaptive quality video streaming application which uses algorithms that try to maximize video frame quality while still having each frame
+			arrive to the receiver on time.
+				\begin{figure}[H]
+				\centering
+				\includegraphics[scale=.45]{Images/adaptive_streaming.jpg}
+				\end{figure}
+			}
+		}
+	}
+	\subsection{Experiment Framework} {
+		\frame{\frametitle{Experiment Framework} {
+			\begin{description}
+				\item[Inputs] \hfill \\
+					- \textbf{Initial Channel Throughput} \\
+					- \textbf{Deterministic Change in Throughput} \\
+					- \textbf{Stochastic Change in Throughput} \\
+					- \textbf{Adaptive Streaming Algorithm} \\
+					- \textbf{Video} \\
+					- \textbf{Video Compression Algorithm} \\
+				\item[Outputs] \hfill \\
+					- \textbf{Realized Channel Throughput}: can be used to rerun experiment with different algorithms on the same channel rate \\
+					- \textbf{Frame Quality}: can be used to compare video quality achieved with different algorithms \\
+			\end{description}
+			}
+		}
+	}
 }
 
 \section{Image Compression} {
